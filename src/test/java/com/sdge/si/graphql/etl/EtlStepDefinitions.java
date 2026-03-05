@@ -1,14 +1,8 @@
-package com.sdge.si.graphql.etl.bdd.steps;
+package com.sdge.si.graphql.etl;
 
-import com.sdge.si.graphql.etl.domain.model.EtlLoadResult;
-import com.sdge.si.graphql.etl.domain.model.EtlRequest;
-import com.sdge.si.graphql.etl.domain.model.EtlTransformedRecord;
-import com.sdge.si.graphql.etl.domain.port.Loader;
-import com.sdge.si.graphql.etl.infrastructure.camel.EtlRoute;
-import com.sdge.si.graphql.etl.infrastructure.repository.InMemoryLoadRepository;
-import com.sdge.si.graphql.etl.infrastructure.service.DefaultExtractor;
-import com.sdge.si.graphql.etl.infrastructure.service.DefaultTransformer;
-import com.sdge.si.graphql.etl.infrastructure.service.InMemoryLoader;
+import com.sdge.si.graphql.etl.extract.EtlMessage;
+import com.sdge.si.graphql.etl.load.EtlLoader;
+import com.sdge.si.graphql.etl.route.EtlRoute;
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.impl.DefaultCamelContext;
@@ -22,15 +16,15 @@ import io.cucumber.java.en.When;
 public class EtlStepDefinitions {
     private CamelContext camelContext;
     private ProducerTemplate producerTemplate;
-    private InMemoryLoadRepository repository;
-    private EtlRequest request;
-    private EtlLoadResult result;
+    private EtlRoute route;
+    private EtlLoader loader;
+    private EtlMessage request;
+    private EtlMessage result;
 
     @Before
     public void setUp() throws Exception {
-        repository = new InMemoryLoadRepository();
-        Loader loader = new InMemoryLoader(repository);
-        EtlRoute route = new EtlRoute(new DefaultExtractor(), new DefaultTransformer(), loader);
+        loader = new EtlLoader();
+        route = new EtlRoute(loader);
         camelContext = new DefaultCamelContext();
         camelContext.addRoutes(route);
         camelContext.start();
@@ -45,19 +39,18 @@ public class EtlStepDefinitions {
         if (camelContext != null) {
             camelContext.stop();
         }
-        if (repository != null) {
-            repository.clear();
-        }
     }
 
     @Given("an ETL request from {string} with payload {string}")
     public void anEtlRequestFromWithPayload(String sourceSystem, String payload) {
-        request = new EtlRequest(sourceSystem, payload, null);
+        request = new EtlMessage();
+        request.setSourceSystem(sourceSystem);
+        request.setPayload(payload);
     }
 
     @When("the ETL pipeline runs")
     public void theEtlPipelineRuns() {
-        result = producerTemplate.requestBody("direct:etl", request, EtlLoadResult.class);
+        result = producerTemplate.requestBody("direct:etl", request, EtlMessage.class);
     }
 
     @Then("the load result status is {string}")
@@ -69,8 +62,7 @@ public class EtlStepDefinitions {
     @Then("the stored payload is normalized to {string}")
     public void theStoredPayloadIsNormalizedTo(String expectedPayload) {
         Assertions.assertNotNull(result);
-        EtlTransformedRecord stored = repository.findById(result.getId());
-        Assertions.assertNotNull(stored);
-        Assertions.assertEquals(expectedPayload, stored.getNormalizedPayload());
+        String stored = loader.findStoredPayload(result.getId());
+        Assertions.assertEquals(expectedPayload, stored);
     }
 }

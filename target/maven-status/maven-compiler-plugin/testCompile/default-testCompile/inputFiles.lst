@@ -1,2 +1,2 @@
-/Users/alpandis/Documents/quarkus-etl-desgin-template/src/test/java/com/sdge/si/graphql/etl/bdd/steps/EtlStepDefinitions.java
-/Users/alpandis/Documents/quarkus-etl-desgin-template/src/test/java/com/sdge/si/graphql/etl/bdd/EtlCucumberTest.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/test/java/com/sdge/si/graphql/etl/EtlCucumberTest.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/test/java/com/sdge/si/graphql/etl/EtlStepDefinitions.java

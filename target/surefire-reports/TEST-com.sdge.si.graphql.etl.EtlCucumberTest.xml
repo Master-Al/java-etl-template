@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.sdge.si.graphql.etl.EtlCucumberTest" time="0.369" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.project.si.bdd.EtlCucumberTest" time="0.369" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -64,10 +64,10 @@
   <testcase name="Transform and load a payload" classname="Camel ETL pipeline" time="0.268">
     <system-out><![CDATA[
 Scenario: Transform and load a payload                           &amp#27;[90m# features/etl.feature:6&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man ETL request from &amp#27;[0m&amp#27;[32m&amp#27;[1m"crm"&amp#27;[0m&amp#27;[32m with payload &amp#27;[0m&amp#27;[32m&amp#27;[1m"  hello world  "&amp#27;[0m &amp#27;[90m# com.sdge.si.graphql.etl.EtlStepDefinitions.anEtlRequestFromWithPayload(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe ETL pipeline runs&amp#27;[0m                                     &amp#27;[90m# com.sdge.si.graphql.etl.EtlStepDefinitions.theEtlPipelineRuns()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe load result status is &amp#27;[0m&amp#27;[32m&amp#27;[1m"LOADED"&amp#27;[0m                        &amp#27;[90m# com.sdge.si.graphql.etl.EtlStepDefinitions.theLoadResultStatusIs(java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe stored payload is normalized to &amp#27;[0m&amp#27;[32m&amp#27;[1m"HELLO WORLD"&amp#27;[0m          &amp#27;[90m# com.sdge.si.graphql.etl.EtlStepDefinitions.theStoredPayloadIsNormalizedTo(java.lang.String)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32man ETL request from &amp#27;[0m&amp#27;[32m&amp#27;[1m"crm"&amp#27;[0m&amp#27;[32m with payload &amp#27;[0m&amp#27;[32m&amp#27;[1m"  hello world  "&amp#27;[0m &amp#27;[90m# com.project.si.bdd.EtlStepDefinitions.anEtlRequestFromWithPayload(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe ETL pipeline runs&amp#27;[0m                                     &amp#27;[90m# com.project.si.bdd.EtlStepDefinitions.theEtlPipelineRuns()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe load result status is &amp#27;[0m&amp#27;[32m&amp#27;[1m"LOADED"&amp#27;[0m                        &amp#27;[90m# com.project.si.bdd.EtlStepDefinitions.theLoadResultStatusIs(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe stored payload is normalized to &amp#27;[0m&amp#27;[32m&amp#27;[1m"HELLO WORLD"&amp#27;[0m          &amp#27;[90m# com.project.si.bdd.EtlStepDefinitions.theStoredPayloadIsNormalizedTo(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
 </testsuite>

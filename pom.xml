@@ -4,7 +4,7 @@
 
  <modelVersion>4.0.0</modelVersion>
 
- <groupId>com.sdge.si.graphql</groupId>
+ <groupId>com.project.si.bdd</groupId>
  <artifactId>quarkus-graphql-app</artifactId>
  <version>1.0-SNAPSHOT</version>
 

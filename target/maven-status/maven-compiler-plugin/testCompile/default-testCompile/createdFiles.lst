@@ -1,2 +1,2 @@
-com/sdge/si/graphql/etl/EtlStepDefinitions.class
-com/sdge/si/graphql/etl/EtlCucumberTest.class
+com/project/si/bdd/etl/EtlStepDefinitions.class
+com/project/si/bdd/etl/EtlCucumberTest.class

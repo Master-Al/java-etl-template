@@ -1,8 +1,8 @@
-package com.sdge.si.graphql.etl;
+package com.sdge.si.bdd.etl;
 
-import com.sdge.si.graphql.etl.extract.EtlMessage;
-import com.sdge.si.graphql.etl.load.EtlLoader;
-import com.sdge.si.graphql.etl.route.EtlRoute;
+import com.sdge.si.bdd.etl.extract.EtlMessage;
+import com.sdge.si.bdd.etl.load.EtlLoader;
+import com.sdge.si.bdd.etl.route.EtlRoute;
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.impl.DefaultCamelContext;

@@ -1,7 +1,7 @@
-package com.sdge.si.graphql.etl.route;
+package com.sdge.si.bdd.etl.route;
 
-import com.sdge.si.graphql.etl.extract.EtlMessage;
-import com.sdge.si.graphql.etl.load.EtlLoader;
+import com.sdge.si.bdd.etl.extract.EtlMessage;
+import com.sdge.si.bdd.etl.load.EtlLoader;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.apache.camel.Exchange;

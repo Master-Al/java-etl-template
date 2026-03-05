@@ -1,6 +1,6 @@
-package com.sdge.si.graphql.etl.load;
+package com.sdge.si.bdd.etl.load;
 
-import com.sdge.si.graphql.etl.extract.EtlMessage;
+import com.sdge.si.bdd.etl.extract.EtlMessage;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.Map;

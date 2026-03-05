@@ -1,0 +1,13 @@
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/infrastructure/service/DefaultExtractor.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/infrastructure/service/DefaultTransformer.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/model/EtlRequest.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/model/EtlRecord.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/port/Extractor.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/model/EtlLoadResult.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/model/EtlTransformedRecord.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/infrastructure/camel/EtlRoute.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/port/Loader.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/infrastructure/repository/InMemoryLoadRepository.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/application/EtlPipeline.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/domain/port/Transformer.java
+/Users/alpandis/Documents/quarkus-etl-desgin-template/src/main/java/com/sdge/si/graphql/etl/infrastructure/service/InMemoryLoader.java

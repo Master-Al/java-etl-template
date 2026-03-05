@@ -1,8 +1,8 @@
-package com.sdge.si.bdd.etl;
+package com.project.si.bdd.etl;
 
-import com.sdge.si.bdd.etl.extract.EtlMessage;
-import com.sdge.si.bdd.etl.load.EtlLoader;
-import com.sdge.si.bdd.etl.route.EtlRoute;
+import com.project.si.bdd.etl.extract.EtlMessage;
+import com.project.si.bdd.etl.load.EtlLoader;
+import com.project.si.bdd.etl.route.EtlRoute;
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.impl.DefaultCamelContext;

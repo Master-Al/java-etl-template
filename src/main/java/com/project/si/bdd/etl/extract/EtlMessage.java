@@ -1,4 +1,4 @@
-package com.sdge.si.bdd.etl.extract;
+package com.project.si.bdd.etl.extract;
 
 public class EtlMessage {
     private String id;

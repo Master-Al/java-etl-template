@@ -1,6 +1,6 @@
-package com.sdge.si.bdd.etl.load;
+package com.project.si.bdd.etl.load;
 
-import com.sdge.si.bdd.etl.extract.EtlMessage;
+import com.project.si.bdd.etl.extract.EtlMessage;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.Map;

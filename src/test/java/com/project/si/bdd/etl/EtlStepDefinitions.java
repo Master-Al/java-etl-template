@@ -1,8 +1,10 @@
 package com.project.si.bdd.etl;
 
+import com.project.si.bdd.etl.extract.EtlExtractor;
 import com.project.si.bdd.etl.extract.EtlMessage;
 import com.project.si.bdd.etl.load.EtlLoader;
 import com.project.si.bdd.etl.route.EtlRoute;
+import com.project.si.bdd.etl.transform.EtlTransformer;
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.impl.DefaultCamelContext;
@@ -24,7 +26,7 @@ public class EtlStepDefinitions {
     @Before
     public void setUp() throws Exception {
         loader = new EtlLoader();
-        route = new EtlRoute(loader);
+        route = new EtlRoute(new EtlExtractor(), new EtlTransformer(), loader);
         camelContext = new DefaultCamelContext();
         camelContext.addRoutes(route);
         camelContext.start();
